@@ -141,7 +141,6 @@ app.post("/register", (req, res) => {
 app.post("/login", (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
-  const type = req.body.type;
 
   db.query("SELECT * FROM user WHERE username = ?", username, (err, result) => {
     if (err) {
